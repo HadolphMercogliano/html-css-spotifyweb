@@ -12,10 +12,6 @@
 	display: table;
 }
 
-.d-flex {
-	display: flex;
-}
-
 /* VARIABLES */
 :root {
 	--primary: red;

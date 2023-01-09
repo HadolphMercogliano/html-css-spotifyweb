@@ -1,7 +1,50 @@
 /* GENERICS */
+body {
+    color: white;
+}
 
-/* HEADER */
+ul {
+    list-style: none;
+}
 
-/* MAIN */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ASIDE */
+aside {
+    width: 20rem;
+    background-color: black;
+    flex-direction: column;
+}
+
+.aside-footer {
+    justify-self: flex-end;
+}
+
+
+/* MAIN CONTENT */
+main {
+    background-color: #141922;
+}
+
+#main-content header {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#main-content ul {
+    margin: 0 auto;
+}
 
 /* FOOTER */
+footer {
+    background-color: #525252;
+    height: 70px;
+}
+
+.bar {}
+
+.progression {}
+
+.volume {}
