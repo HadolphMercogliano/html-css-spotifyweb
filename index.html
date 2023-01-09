@@ -8,11 +8,17 @@
 
     <meta name="Description" content="">
     <meta name="Author" content="Hadolph Mercogliano">
+    <link rel="icon" href="./img/favicon.ico" type="ico">
+
 
     <!-- LINK FONTAWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- LINK FONT  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
 
     <!-- LINK CSS  -->
     <link rel="stylesheet" href="./css/reset.css">
@@ -24,42 +30,67 @@
 </head>
 
 <body>
-    <div class="d-flex">
+    <div class="pinco-pallo d-flex">
         <aside class="d-flex">
             <div id="logo">
-
+                <img src="./img/logo.svg" alt="">
             </div>
 
             <nav>
                 <!-- HOME -->
                 <div>
-
+                    <img src="./img/home.svg" alt="home">
+                    <span>Home</span>
                 </div>
                 <!-- SEARCH -->
                 <div>
-
+                    <img src="./img/search.svg" alt="cerca">
+                    <span>Cerca</span>
                 </div>
                 <!-- LIBRARY -->
                 <div>
-
+                    <img src="./img/libreria.svg" alt="libreria">
+                    <span>La tua libreria</span>
                 </div>
             </nav>
 
             <!-- PLAYLIST  -->
-            <div>
+            <div id="playlist">
                 <h3>PLAYLIST</h3>
+                <div class="d-flex">
+                    <div class="add">
+                        <span>+</span>
+                    </div>
+                    <span>Crea Playlist </span>
+                </div>
+                <ul>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                </ul>
 
             </div>
             <!-- ASIDE FOOTER  -->
             <div class="aside-footer">
-
+                <div class="d-flex">
+                    <img src="./img/download.svg" alt="download">
+                    <span>Installa app</span>
+                </div>
+                <div class="user d-flex">
+                    <img src="./img/profile.svg" alt="">
+                    <h3>John Doe</h3>
+                </div>
             </div>
 
         </aside>
         <!-- MAIN CONTENT -->
         <main>
-            <header>
-
+            <header class="d-flex">
+                <a href="#">EFFETTUA L'UPGRADE</a>
             </header>
             <section id="main-content">
                 <!-- NAVBAR -->
