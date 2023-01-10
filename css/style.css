@@ -24,7 +24,7 @@ h4 {
 
 /* SIDEBAR */
 .sidebar {
-    width: 18rem;
+    width: var(--sidebar-width);
     background-color: black;
     flex-direction: column;
     font-weight: 600;
@@ -84,6 +84,7 @@ h4 {
     width: 2rem;
     text-align: center;
     margin-right: 10px;
+    margin-bottom: 10px;
     color: black;
 }
 
@@ -127,12 +128,11 @@ h4 {
 /* MAIN */
 .top-content {
     height: calc(100vh - var(--footer-height));
-    height: var();
 }
 
 main {
     background-color: #141922;
-    width: calc(100% - 18rem);
+    width: calc(100% - var(--sidebar-width));
     overflow: auto;
 }
 
@@ -159,20 +159,32 @@ main header a {
 
 /* MAIN CONTENT  */
 #main-content {
-    padding: 120px 0;
+    padding: var(--header-height) 20px;
 }
 
-#main-content section {
-    padding: 0 20px;
+#main-content nav {
+    margin-top: 1rem;
+}
+
+#main-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#main-content span {
+    display: block;
+    margin: 1rem 0;
+    font-size: .9rem;
 }
 
 /* NAVBAR  */
 #main-content ul {
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 #main-content ul li {
-    padding: 0 15px;
+    padding: 10px 10px;
 }
 
 #main-content nav li div {
@@ -183,6 +195,7 @@ main header a {
     margin: 0 auto;
 }
 
+/* RECENTLY PLAYED  */
 .row {
     max-width: 1800px;
     margin: 0 -10px;
@@ -195,9 +208,6 @@ main header a {
 .card-text {
     text-align: center;
 }
-
-/* RECENTLY PLAYED  */
-#recently-played {}
 
 /* CREATED FOR  */
 
@@ -215,8 +225,13 @@ footer {
 }
 
 /* SONG  */
-#song {
-    max-width: 30%;
+footer #song {
+    width: var(--sidebar-width);
+    flex-grow: 0;
+}
+
+footer #song span {
+    font-size: 0.7rem;
 }
 
 footer #song div {
@@ -239,13 +254,15 @@ footer .save a {
 /* CONTROLS */
 #controls {
     flex-direction: column;
-    /* max-width: 500px; */
+    flex-basis: 500px;
+    flex-shrink: 2;
+    padding: 0 10px;
 }
 
 #controls a,
 #volume a {
     color: #eee;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 #controls .fa-circle-play {
@@ -253,33 +270,19 @@ footer .save a {
 }
 
 .progression {
-    padding: 10px 0;
-    min-width: 200px;
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
+    padding: 5px 0;
+    width: 100%;
     align-items: center;
+    cursor: pointer;
 }
 
 .bar {
-    margin: 0 15px;
+    margin: 0 10px;
     display: inline-block;
     height: 4px;
     width: 100%;
     border-radius: 2px;
     background-color: rgb(71, 71, 71);
-}
-
-
-/* VOLUME  */
-#volume {}
-
-#volume a {
-    color: #eee;
-}
-
-#volume .progression {
-    width: 150px;
 }
 
 .bar span {
@@ -289,4 +292,23 @@ footer .save a {
     background-color: #bdbdbd;
     border-radius: 2px;
     position: relative;
+}
+
+/* VOLUME  */
+#volume {
+    flex-basis: 15%;
+}
+
+#volume a {
+    color: #eee;
+}
+
+#volume .progression {
+    justify-self: flex-end;
+    flex-shrink: 1;
+}
+
+#volume .bar {
+    min-width: 60px;
+    width: 90%;
 }
