@@ -18,23 +18,18 @@ h1,
 h2,
 h3,
 h4 {
-    color: white;
+    color: #eee;
 }
 
-#playlist h3 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
 
 /* ASIDE */
 aside {
     width: 20rem;
     background-color: black;
     flex-direction: column;
-    font-size: 1.2rem;
     padding: 0 15px;
     font-weight: 600;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 aside #logo {
@@ -47,57 +42,77 @@ aside #logo {
 }
 
 aside nav>div {
-    height: 4rem;
+    height: 3rem;
     padding: 8px 0;
-    line-height: 4rem;
+    line-height: 3rem;
 }
 
 aside nav img {
     vertical-align: middle;
 }
 
-.aside-footer div {
-    height: 20px;
-    line-height: 20px;
-    margin: 1rem 0;
-    flex-direction: row;
+#playlist h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
-
-.aside-footer .user {}
 
 #playlist>div {
     align-items: center;
 }
 
 #playlist ul {
-    flex-shrink: 1;
+    /* min-height: 200px; */
+    max-height: calc(100vh - 118px - 144px - 100px);
     overflow: auto;
 }
 
 #playlist li {
-    line-height: 3rem;
+    line-height: 2.5rem;
 }
 
-.add {
+#playlist .add {
     background-color: #a3a3a3;
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
     text-align: center;
     margin-right: 10px;
     color: black;
 }
 
-.add span {
-    font-size: 3rem;
-    line-height: 3rem;
+#playlist .add span {
+    font-size: 2rem;
+    line-height: 2rem;
 }
 
 .aside-footer {
     margin-top: auto;
 }
 
-/* MAIN CONTENT                                     cambia classe */
-.pinco-pallo {
+.aside-footer div {
+    height: 30px;
+    margin: 1rem 0;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.aside-footer .user {
+    height: 40px;
+    align-items: center;
+}
+
+.aside-footer .app {
+    border-bottom: 1px solid #a3a3a3;
+}
+
+.aside-footer .user img {
+    width: 40px;
+    background-color: #a3a3a3;
+    border-radius: 50%;
+
+}
+
+/* MAIN                                                 cambia classe */
+.top-content {
     height: calc(100vh - 100px);
 }
 
@@ -107,31 +122,37 @@ main {
     overflow: auto;
 }
 
+/* HEADER  */
 main header {
     background-color: rgba(0, 0, 0, 0.5);
     height: 100px;
     width: calc(100% - 20rem);
     position: fixed;
-    z-index: 1;
+    /* z-index: 1; */
     justify-content: flex-end;
     align-items: center;
 }
 
 main header a {
-    line-height: 30px;
+    line-height: 20px;
     padding: 15px 40px;
-    border: 1px solid white;
+    border: 1px solid #eee;
     border-radius: 25px;
-    margin-right: 10px;
+    margin-right: 25px;
     font-weight: 700;
-    color: white;
+    color: #eee;
 }
 
+/* MAIN CONTENT  */
 #main-content {
-    padding: 130px 0;
+    padding: 120px 0;
 }
 
+#main-content section {
+    padding: 0 20px;
+}
 
+/* NAV  */
 #main-content ul {
     margin: 0 auto;
 }
@@ -139,6 +160,26 @@ main header a {
 #main-content ul li {
     padding: 0 15px;
 }
+
+.row {
+    max-width: 1800px;
+    margin: 0 -10px;
+}
+
+.card {
+    padding: 10px;
+}
+
+.card-text {
+    text-align: center;
+}
+
+/* RECENTLY PLAYED  */
+#recently-played {}
+
+/* CREATED FOR  */
+
+/* POPULAR ARTIST  */
 
 /* FOOTER */
 footer {
