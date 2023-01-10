@@ -14,6 +14,9 @@
 
 /* VARIABLES */
 :root {
+	--sidebar-width: 18rem;
+	--header-height: 5.5rem;
+	--footer-height: 5.5rem;
 	--primary: red;
 	--paddings: 2px 10px;
 }

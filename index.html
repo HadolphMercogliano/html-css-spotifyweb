@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="./css/utils.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/12bool.css">
+    <link rel="stylesheet" href="./css/effects.css">
 
     <title>Spotify</title>
 </head>
@@ -32,7 +33,7 @@
 <body>
     <div class="top-content d-flex">
         <!-- SIDEBAR -->
-        <aside class="d-flex">
+        <div class="sidebar d-flex">
             <!-- LOGO  -->
             <div id="logo">
                 <img src="./img/logo.svg" alt="">
@@ -42,17 +43,17 @@
                 <!-- HOME -->
                 <div>
                     <img src="./img/home.svg" alt="home">
-                    <span>Home</span>
+                    <a href="#">Home</a>
                 </div>
                 <!-- SEARCH -->
                 <div>
                     <img src="./img/search.svg" alt="cerca">
-                    <span>Cerca</span>
+                    <a href="#">Cerca</a>
                 </div>
                 <!-- LIBRARY -->
                 <div>
                     <img src="./img/libreria.svg" alt="libreria">
-                    <span>La tua libreria</span>
+                    <a href="#">La tua libreria</a>
                 </div>
             </nav>
 
@@ -63,32 +64,34 @@
                     <div class="add">
                         <span>+</span>
                     </div>
-                    <span>Crea Playlist </span>
+                    <a href="#">Crea Playlist </a>
                 </div>
                 <ul>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
+                    <li><a href="#">Nome Playlist</a></li>
+                    <li><a href="#">Nome Playlist</a></li>
+                    <li><a href="#">Nome Playlist</a></li>
+                    <li><a href="#">Nome Playlist</a></li>
+                    <li><a href="#">Nome Playlist</a></li>
+                    <li><a href="#">Nome Playlist</a></li>
+                    <li><a href="#">Nome Playlist</a></li>
                 </ul>
 
             </div>
             <!-- ASIDE FOOTER  -->
-            <div class="aside-footer">
+            <div class="side-footer">
                 <div class=" app d-flex">
                     <img src="./img/download.svg" alt="download">
-                    <span>Installa app</span>
+                    <a href="#">Installa app</a>
                 </div>
                 <div class="user d-flex">
-                    <img src="./img/profile.svg" alt="">
-                    <h3>John Doe</h3>
+                    <a class="d-flex" href="#">
+                        <img src="./img/profile.svg" alt="">
+                        <h3>John Doe</h3>
+                    </a>
                 </div>
             </div>
 
-        </aside>
+        </div>
         <!-- MAIN CONTENT -->
         <main>
             <header class="d-flex">
@@ -98,12 +101,25 @@
                 <!-- NAVBAR -->
                 <nav class="d-flex jc-center">
                     <ul class="d-flex jc-center">
-                        <li><a href="#">IN EVIDENZA</a></li>
-                        <li><a href="#">PODCAST</a></li>
-                        <li><a href="#">CLASSIFICHE</a></li>
-                        <li><a href="#">GENERI E MOOD</a></li>
-                        <li><a href="#">NUOVE USCITE</a></li>
-                        <li><a href="#">SCOPRI</a></li>
+                        <li>
+                            <a href="#">IN EVIDENZA</a><br>
+                            <div></div>
+                        </li>
+                        <li><a href="#">PODCAST</a><br>
+                            <div></div>
+                        </li>
+                        <li><a href="#">CLASSIFICHE</a><br>
+                            <div></div>
+                        </li>
+                        <li><a href="#">GENERI E MOOD</a><br>
+                            <div></div>
+                        </li>
+                        <li><a href="#">NUOVE USCITE</a><br>
+                            <div></div>
+                        </li>
+                        <li><a href="#">SCOPRI</a><br>
+                            <div></div>
+                        </li>
                     </ul>
                 </nav>
                 <!-- RECENTLY PLAYED -->
@@ -200,13 +216,12 @@
                     <span>Più ascolti, più accurati saranno i suggerimenti</span>
 
                     <div class="row">
-
                         <div class="col-2">
                             <div class="card">
                                 <img src="./img/youg.jpeg" alt="">
                             </div>
                             <div class="card-text">
-                                <h4>Release Radar</h4>
+                                <h4>Lana del Rey</h4>
                             </div>
                         </div>
                         <div class="col-2">
@@ -214,7 +229,7 @@
                                 <img src="./img/einaudi.jpeg" alt="">
                             </div>
                             <div class="card-text">
-                                <h4>Release Radar</h4>
+                                <h4>Ludovico Einaudi</h4>
                             </div>
                         </div>
                     </div>
@@ -223,18 +238,66 @@
 
         </main>
     </div>
-    <footer class="d-flex">
+    <footer class="d-flex jc-space-between">
         <!-- SONG -->
-        <div class="d-flex">
-
+        <div id="song" class=" d-flex align-i-center">
+            <img src="./img/sinister.jpeg" alt="">
+            <div class="d-flex">
+                <h4> Sinister</h4>
+                <span>Nome Brano</span>
+            </div>
+            <div class="save">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="#"><i class="fa-regular fa-folder"></i></a>
+            </div>
         </div>
         <!-- CONTROLS -->
-        <div class="d-flex">
-
+        <div id="controls" class="d-flex jc-center align-i-center">
+            <div>
+                <a href="#">
+                    <i class="fa-solid fa-shuffle"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-backward-step"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-regular fa-circle-play"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-forward-step"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </a>
+            </div>
+            <div class=" progression">
+                <span>0:25</span>
+                <div class="bar">
+                    <span></span>
+                </div>
+                <span>4:35</span>
+            </div>
         </div>
         <!-- VOLUME -->
-        <div class="d-flex">
+        <div id="volume" class="d-flex align-i-center">
 
+            <a href="#">
+                <i class="fa-solid fa-list-ul"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-display"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-volume-high"></i>
+            </a>
+
+            <div class="progression">
+                <div class="bar">
+                    <span></span>
+                </div>
+            </div>
         </div>
     </footer>
 </body>

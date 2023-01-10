@@ -22,17 +22,16 @@ h4 {
 }
 
 
-/* ASIDE */
-aside {
-    width: 20rem;
+/* SIDEBAR */
+.sidebar {
+    width: 18rem;
     background-color: black;
     flex-direction: column;
-    padding: 0 15px;
     font-weight: 600;
-    /* overflow: auto; */
+    overflow-y: auto;
 }
 
-aside #logo {
+.sidebar #logo {
     height: 100px;
 }
 
@@ -41,33 +40,42 @@ aside #logo {
     height: 100%;
 }
 
-aside nav>div {
+.sidebar nav>div {
     height: 3rem;
     padding: 8px 0;
-    line-height: 3rem;
 }
 
-aside nav img {
+.sidebar nav div:first-child {
+    border-left: 3px solid #9dfd1f;
+}
+
+.sidebar nav img {
     vertical-align: middle;
+    padding-left: 20px;
 }
 
 #playlist h3 {
     margin-top: 2rem;
     margin-bottom: 1rem;
+    padding-left: 20px;
 }
 
 #playlist>div {
     align-items: center;
+    padding-left: 20px;
+    cursor: pointer;
 }
 
 #playlist ul {
-    /* min-height: 200px; */
+    padding-left: 20px;
+    min-height: 110px;
     max-height: calc(100vh - 118px - 144px - 100px);
     overflow: auto;
 }
 
 #playlist li {
     line-height: 2.5rem;
+    font-size: 0.9rem;
 }
 
 #playlist .add {
@@ -84,49 +92,55 @@ aside nav img {
     line-height: 2rem;
 }
 
-.aside-footer {
+.side-footer {
+    padding-left: 20px;
     margin-top: auto;
 }
 
-.aside-footer div {
+.side-footer div {
     height: 30px;
     margin: 1rem 0;
     flex-direction: row;
     gap: 1rem;
 }
 
-.aside-footer .user {
-    height: 40px;
+.side-footer a {
     align-items: center;
 }
 
-.aside-footer .app {
+.side-footer .user a {
+    height: 40px;
+}
+
+.side-footer .app {
     border-bottom: 1px solid #a3a3a3;
 }
 
-.aside-footer .user img {
+.side-footer .user img {
+    margin-right: 20px;
     width: 40px;
     background-color: #a3a3a3;
     border-radius: 50%;
 
 }
 
-/* MAIN                                                 cambia classe */
+/* MAIN */
 .top-content {
-    height: calc(100vh - 100px);
+    height: calc(100vh - var(--footer-height));
+    height: var();
 }
 
 main {
     background-color: #141922;
-    width: calc(100% - 20rem);
+    width: calc(100% - 18rem);
     overflow: auto;
 }
 
 /* HEADER  */
 main header {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100px;
-    width: calc(100% - 20rem);
+    background-color: rgba(0, 0, 0, 0.8);
+    height: var(--header-height);
+    width: calc(100% - var(--sidebar-width));
     position: fixed;
     /* z-index: 1; */
     justify-content: flex-end;
@@ -138,7 +152,7 @@ main header a {
     padding: 15px 40px;
     border: 1px solid #eee;
     border-radius: 25px;
-    margin-right: 25px;
+    margin-right: 35px;
     font-weight: 700;
     color: #eee;
 }
@@ -152,13 +166,21 @@ main header a {
     padding: 0 20px;
 }
 
-/* NAV  */
+/* NAVBAR  */
 #main-content ul {
     margin: 0 auto;
 }
 
 #main-content ul li {
     padding: 0 15px;
+}
+
+#main-content nav li div {
+    height: 3px;
+    width: 40%;
+    border-radius: 2px;
+    background-color: transparent;
+    margin: 0 auto;
 }
 
 .row {
@@ -180,17 +202,91 @@ main header a {
 /* CREATED FOR  */
 
 /* POPULAR ARTIST  */
+#popular-artist img {
+    border-radius: 50%;
+}
 
 /* FOOTER */
 footer {
-    background-color: #525252;
-    height: 100px;
+    background-color: #313131;
+    height: var(--footer-height);
     /* position: fixed; */
     /* z-index: 1; */
 }
 
-.bar {}
+/* SONG  */
+#song {
+    max-width: 30%;
+}
 
-.progression {}
+footer #song div {
+    flex-direction: column;
+}
 
-.volume {}
+footer #song img {
+    margin: 0 15px;
+    height: 60%;
+}
+
+footer .save {
+    margin-left: auto;
+}
+
+footer .save a {
+    margin-left: 10px;
+}
+
+/* CONTROLS */
+#controls {
+    flex-direction: column;
+    /* max-width: 500px; */
+}
+
+#controls a,
+#volume a {
+    color: #eee;
+    margin: 0 10px;
+}
+
+#controls .fa-circle-play {
+    font-size: 1.5rem;
+}
+
+.progression {
+    padding: 10px 0;
+    min-width: 200px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar {
+    margin: 0 15px;
+    display: inline-block;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: rgb(71, 71, 71);
+}
+
+
+/* VOLUME  */
+#volume {}
+
+#volume a {
+    color: #eee;
+}
+
+#volume .progression {
+    width: 150px;
+}
+
+.bar span {
+    display: block;
+    height: 4px;
+    width: 30%;
+    background-color: #bdbdbd;
+    border-radius: 2px;
+    position: relative;
+}

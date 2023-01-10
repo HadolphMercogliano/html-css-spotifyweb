@@ -24,6 +24,11 @@
 	justify-content: space-evenly;
 }
 
+.align-i-center {
+	align-items: center;
+}
+
+
 /* DISPLAYS */
 
 .d-flex {

@@ -1,0 +1,46 @@
+/* SIDEBAR  */
+.sidebar a:hover {
+    color: #fff;
+}
+
+/* MAIN CONTENT  */
+#main-content nav li:hover div {
+    background-color: #9dfd1f;
+}
+
+#main-content a:hover {
+    color: #fff;
+}
+
+/* HEADER  */
+main header a:hover {
+    scale: 1.1;
+}
+
+/* FOOTER  */
+footer .progression:hover .bar span {
+    background-color: #9dfd1f;
+}
+
+footer .progression:hover .bar span::after {
+    content: '';
+    display: block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #eee;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+footer #song span {}
+
+footer .save a:hover {
+    color: #fff;
+}
+
+footer .fa-circle-play:hover {
+    scale: 1.1;
+}
