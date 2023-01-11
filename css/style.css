@@ -124,8 +124,13 @@ h4 {
 
 .side-footer .app {
     border-bottom: 1px solid #a3a3a3;
-    font-size: 0.8rem;
-    line-height: 1.6;
+    font-size: 0.7rem;
+    line-height: 29px;
+
+}
+
+.side-footer .app i {
+    vertical-align: middle;
 }
 
 .side-footer .user img {
