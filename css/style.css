@@ -206,6 +206,8 @@ main header a {
 .row {
     max-width: 1800px;
     margin: 0 -10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .card {
@@ -317,6 +319,21 @@ footer .save a {
 #volume .bar {
     min-width: 60px;
     width: 90%;
+}
+
+@media screen and (max-height: 600px) {
+    main header {
+        height: 0;
+    }
+
+    main header a {
+        display: none;
+    }
+
+    #main-content {
+        padding-top: 0;
+    }
+
 }
 
 @media screen and (max-width: 992px) {
