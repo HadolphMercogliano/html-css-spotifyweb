@@ -40,6 +40,16 @@ h4 {
     height: 100%;
 }
 
+.sidebar #logo-small {
+    height: 100px;
+    /* display: none; */
+}
+
+#logo-small img {
+    padding: 10px;
+    height: 100%;
+}
+
 .sidebar nav>div {
     height: 3rem;
     padding: 8px 0;
@@ -109,17 +119,14 @@ h4 {
     align-items: center;
 }
 
-.side-footer .user a {
-    height: 40px;
-}
-
 .side-footer .app {
     border-bottom: 1px solid #a3a3a3;
 }
 
 .side-footer .user img {
-    margin-right: 20px;
-    width: 40px;
+    height: 40px;
+    width: 30px;
+    margin-right: 10px;
     background-color: #a3a3a3;
     border-radius: 50%;
 
@@ -142,7 +149,7 @@ main header {
     height: var(--header-height);
     width: calc(100% - var(--sidebar-width));
     position: fixed;
-    /* z-index: 1; */
+    z-index: 2;
     justify-content: flex-end;
     align-items: center;
 }
@@ -220,8 +227,6 @@ main header a {
 footer {
     background-color: #313131;
     height: var(--footer-height);
-    /* position: fixed; */
-    /* z-index: 1; */
 }
 
 /* SONG  */
@@ -236,6 +241,7 @@ footer #song span {
 
 footer #song div {
     flex-direction: column;
+    margin-left: 10px;
 }
 
 footer #song img {
@@ -244,7 +250,7 @@ footer #song img {
 }
 
 footer .save {
-    margin-left: auto;
+    /* margin-left: auto; */
 }
 
 footer .save a {
@@ -311,4 +317,67 @@ footer .save a {
 #volume .bar {
     min-width: 60px;
     width: 90%;
+}
+
+@media screen and (max-width: 992px) {
+    .card {
+        padding: 5px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    footer #song img {
+        margin: 0 10px;
+    }
+
+    main header a {
+        font-size: .8rem;
+        padding: 15px 26px
+    }
+
+    footer #song img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 4rem;
+    }
+
+    .sidebar nav img {
+        padding: 0;
+        margin: 1rem;
+    }
+
+    .sidebar nav div:first-child {
+        border: transparent;
+    }
+
+    .sidebar .app {
+        border-color: transparent;
+    }
+
+    main {
+        width: calc(100% - 4rem);
+    }
+
+    main header {
+        width: calc(100% - 4rem);
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    footer #song {
+        flex-shrink: 2;
+    }
+
+    footer #volume {
+        margin-right: 10px;
+    }
+
 }

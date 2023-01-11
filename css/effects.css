@@ -11,6 +11,15 @@
     color: #fff;
 }
 
+.side-footer .app:hover a {
+    color: #fff;
+}
+
+/* HEADER  */
+main header a:hover {
+    scale: 1.1;
+}
+
 /* MAIN CONTENT  */
 #main-content nav li:hover div {
     background-color: #9dfd1f;
@@ -20,9 +29,23 @@
     color: #fff;
 }
 
-/* HEADER  */
-main header a:hover {
-    scale: 1.1;
+.card {
+    position: relative;
+}
+
+.col-2:hover .card img {
+    opacity: 0.4;
+}
+
+.col-2:hover .card .overlay {
+    display: block;
+    position: absolute;
+    color: #eee;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
 }
 
 /* FOOTER  */
