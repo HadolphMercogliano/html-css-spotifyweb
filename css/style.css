@@ -106,6 +106,8 @@ h4 {
 .side-footer {
     padding-left: 20px;
     margin-top: auto;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .side-footer div {
@@ -117,10 +119,13 @@ h4 {
 
 .side-footer a {
     align-items: center;
+
 }
 
 .side-footer .app {
     border-bottom: 1px solid #a3a3a3;
+    font-size: 0.8rem;
+    line-height: 1.6;
 }
 
 .side-footer .user img {
@@ -216,6 +221,23 @@ main header a {
 
 .card {
     padding: 15px 10px;
+}
+
+.card .overlay {
+    position: absolute;
+    color: #eee;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    opacity: 0;
+}
+
+.overlay i {
+    background-color: rgba(14, 13, 13, 0.575);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px black;
+
 }
 
 .card-text {
@@ -381,6 +403,7 @@ footer .save a {
 
     .sidebar .app {
         border-color: transparent;
+
     }
 
     main {
