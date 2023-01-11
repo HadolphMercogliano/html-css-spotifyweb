@@ -1,40 +1,55 @@
 /* SIDEBAR  */
 .sidebar nav div:hover a {
     color: #fff;
+    transition: 0.5s ease;
 }
 
 #playlist div:hover a {
     color: #fff;
+    transition: 0.3s ease;
 }
 
 #playlist li:hover a {
     color: #fff;
+    transition: 0.4s ease;
 }
 
 .side-footer .app:hover a {
+    transition: 0.3s ease;
     color: #fff;
 }
 
 /* HEADER  */
 main header a:hover {
+    transition: 0.1s linear;
     scale: 1.1;
 }
 
 /* MAIN CONTENT  */
 #main-content nav li:hover div {
     background-color: #9dfd1f;
+    transition: 0.3s ease;
 }
 
 #main-content a:hover {
     color: #fff;
+    transition: 0.3s ease;
 }
 
 .card {
     position: relative;
 }
 
+
 .col-2:hover .card img {
-    opacity: 0.4;
+    opacity: 0.65;
+    filter: blur(1px);
+    transition: 0.6s ease;
+}
+
+.col-2:hover {
+    transition: 0.6s ease;
+    background-color: #19212e;
 }
 
 .col-2:hover .card .overlay {
@@ -46,6 +61,7 @@ main header a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
+    transition: 0.6s ease;
 }
 
 /* FOOTER  */
